@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Prioritize ten AI industry development factors and explain your decision for an assigned country. Includes student comments and Print / Save PDF.">
-<title>Country AI Development Decision Roadmap</title>
+<meta name="description" content="Prioritize ten AI industry development factors for an assigned country. Calculate the priority index and print or save a PDF.">
+<title>Country Decision Factors Roadmap</title>
 <style>
 :root{color-scheme:light;--navy:#12385f;--ink:#17324d;--muted:#526b80;--line:#d6e0e8;--paper:#f3f6f9;--card:#f8fbfd}
 *{box-sizing:border-box}
@@ -86,8 +86,8 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
   <div class="screen">
     <header class="hero">
       <p class="eyebrow">Country decision roadmap</p>
-      <h1>Country AI Development Decision Roadmap</h1>
-      <p class="intro">Identify and prioritize the factors influencing your proposed AI industry development in your assigned country. Explain how your priorities support your decision.</p>
+      <h1>Country Decision Factors Roadmap</h1>
+      <p class="intro">Identify and prioritize the factors influencing your proposed AI industry development in your assigned country.</p>
     </header>
     <div class="toolbar" aria-label="Roadmap actions">
       <p class="save-note">Responses stay in this tab. Print or save a PDF before closing or refreshing.</p>
@@ -98,15 +98,11 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
     <main id="main">
       <section class="content" aria-labelledby="context-heading">
         <h2 id="context-heading">Your development decision</h2>
-        <p class="sub">Identify the location and AI industry you are considering.</p>
+        <p class="sub">Select your assigned country.</p>
         <div class="context-grid">
           <div>
             <label for="location">Assigned country <span class="optional">(optional)</span></label>
             <select id="location" autocomplete="off"><option value="">Select a country</option><option value="Algeria">Algeria</option><option value="Brazil">Brazil</option><option value="Costa Rica">Costa Rica</option><option value="France">France</option><option value="Ireland">Ireland</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kenya">Kenya</option><option value="Mexico">Mexico</option><option value="Morocco">Morocco</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="South Korea">South Korea</option><option value="Ukraine">Ukraine</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option></select>
-          </div>
-          <div>
-            <label for="industry">Selected AI industry <span class="optional">(optional)</span></label>
-            <input id="industry" type="text" placeholder="Enter your proposed AI industry" autocomplete="off">
           </div>
         </div>
       </section>
@@ -210,26 +206,17 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
           </div>
         </div>
       </section>
-      <section class="content" aria-labelledby="comments-heading">
-        <h2 id="comments-heading">Student comments and analysis</h2>
-        <p id="analysis-prompt" class="analysis-prompt">Explain how the selected industry leverages the country’s strengths, supports high-quality jobs, strengthens resilience, and aligns with the country’s economic, social, and environmental priorities.</p>
-        <label for="comments">Your analysis</label>
-        <textarea id="comments" rows="10" placeholder="Write your analysis here." aria-describedby="analysis-prompt comments-help"></textarea>
-        <p class="help" id="comments-help">Connect your factor ratings to your recommendation. Include evidence and tradeoffs where relevant. Your full response is included when you print or save a PDF.</p>
-      </section>
     </main>
     <footer>Browser-based student drafting tool · Nothing is submitted or shared automatically.</footer>
   </div>
   <section id="print-report" class="print-report" aria-label="Printable roadmap response"></section>
 </div>
-<script type="application/json" id="roadmap-config">{"title": "Country AI Development Decision Roadmap", "scope": "country", "locationLabel": "Assigned country", "locationPlaceholder": "Enter your assigned country", "prompt": "Explain how the selected industry leverages the country’s strengths, supports high-quality jobs, strengthens resilience, and aligns with the country’s economic, social, and environmental priorities.", "factors": ["National Economic Impact & Growth Potential", "Global Competitiveness & Market Demand", "Talent & Workforce Availability", "Policy & Regulatory Support", "Infrastructure & Technology Readiness", "Investment & Capital Availability", "Industry Ecosystem & Partnerships", "Social Impact & Ethical Considerations", "Sustainability & Environmental Impact", "National Security & Strategic Priority"]}</script>
+<script type="application/json" id="roadmap-config">{"title": "Country Decision Factors Roadmap", "scope": "country", "locationLabel": "Assigned country", "locationPlaceholder": "Enter your assigned country", "factors": ["National Economic Impact & Growth Potential", "Global Competitiveness & Market Demand", "Talent & Workforce Availability", "Policy & Regulatory Support", "Infrastructure & Technology Readiness", "Investment & Capital Availability", "Industry Ecosystem & Partnerships", "Social Impact & Ethical Considerations", "Sustainability & Environmental Impact", "National Security & Strategic Priority"]}</script>
 <script>
 (() => {
   'use strict';
   const config = JSON.parse(document.getElementById('roadmap-config').textContent);
   const locationInput = document.getElementById('location');
-  const industryInput = document.getElementById('industry');
-  const commentsInput = document.getElementById('comments');
   const ratings = Array.from(document.querySelectorAll('.factor select'));
   const progress = document.getElementById('rating-progress');
   const indexValue = document.getElementById('index-value');
@@ -274,8 +261,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
     report.append(makeElement('h1', config.title));
     const details = makeElement('dl', undefined, 'report-context');
     const context = [
-      [config.locationLabel, locationInput.value.trim() || 'Not provided'],
-      ['Selected AI industry', industryInput.value.trim() || 'Not provided']
+      [config.locationLabel, locationInput.value.trim() || 'Not provided']
     ];
     context.forEach(([label, value]) => {
       details.append(makeElement('dt', label), makeElement('dd', value));
@@ -305,9 +291,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
       body.append(row);
     });
     table.append(head, body);
-    report.append(table, makeElement('h2', 'Student comments and analysis'));
-    report.append(makeElement('p', config.prompt, 'report-prompt'));
-    report.append(makeElement('div', commentsInput.value.trim() ? commentsInput.value : 'No comments entered.', 'report-comments'));
+    report.append(table);
     report.append(makeElement('p', 'Importance weights express the student’s priorities for the selected AI industry.', 'report-note'));
   }
 
@@ -327,3 +311,4 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
 </script>
 </body>
 </html>
+
