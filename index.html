@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Prioritize ten AI industry development factors for an assigned country. Calculate the priority index and print or save a PDF.">
-<title>Country Decision Factors Roadmap</title>
+<meta name="description" content="Prioritize ten AI readiness factors and explain your priorities for an assigned state or nation. Includes Print / Save PDF.">
+<title>State AI Development Decision Roadmap</title>
 <style>
 :root{color-scheme:light;--navy:#12385f;--ink:#17324d;--muted:#526b80;--line:#d6e0e8;--paper:#f3f6f9;--card:#f8fbfd}
 *{box-sizing:border-box}
@@ -85,9 +85,9 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
 <div class="wrap">
   <div class="screen">
     <header class="hero">
-      <p class="eyebrow">Country decision roadmap</p>
-      <h1>Country Decision Factors Roadmap</h1>
-      <p class="intro">Identify and prioritize the factors influencing your proposed AI industry development in your assigned country.</p>
+      <p class="eyebrow">State decision roadmap</p>
+      <h1>State AI Development Decision Roadmap</h1>
+      <p class="intro">Identify and prioritize the factors that will help your assigned state or nation prepare for AI readiness, including energy, water, land, infrastructure, and workforce needs. Explain how your priorities support responsible and sustainable AI development.</p>
     </header>
     <div class="toolbar" aria-label="Roadmap actions">
       <p class="save-note">Responses stay in this tab. Print or save a PDF before closing or refreshing.</p>
@@ -97,12 +97,12 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
     <noscript><p class="content">Enable JavaScript to calculate the priority index and create a printable response.</p></noscript>
     <main id="main">
       <section class="content" aria-labelledby="context-heading">
-        <h2 id="context-heading">Your development decision</h2>
-        <p class="sub">Select your assigned country.</p>
+        <h2 id="context-heading">Your AI readiness priorities</h2>
+        <p class="sub">Identify the location you are assessing for AI readiness.</p>
         <div class="context-grid">
           <div>
-            <label for="location">Assigned country <span class="optional">(optional)</span></label>
-            <select id="location" autocomplete="off"><option value="">Select a country</option><option value="Algeria">Algeria</option><option value="Brazil">Brazil</option><option value="Costa Rica">Costa Rica</option><option value="France">France</option><option value="Ireland">Ireland</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kenya">Kenya</option><option value="Mexico">Mexico</option><option value="Morocco">Morocco</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="South Korea">South Korea</option><option value="Ukraine">Ukraine</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option></select>
+            <label for="location">Assigned U.S. state <span class="optional">(optional)</span></label>
+            <select id="location" autocomplete="off"><option value="">Select a state</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Maryland">Maryland</option><option value="New York">New York</option><option value="South Dakota">South Dakota</option><option value="Texas">Texas</option><option value="West Virginia">West Virginia</option></select>
           </div>
         </div>
       </section>
@@ -115,9 +115,9 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
           <p class="progress" id="rating-progress">0 of 10 factors rated</p>
         </div>
         <p class="scale-note">0 = not applicable · 1 = lowest · 2 = low · 3 = moderate · 4 = high · 5 = highest</p>
-        <div class="roadmap" aria-label="Country decision factors"><div class="factor">
+        <div class="roadmap" aria-label="State decision factors"><div class="factor">
           <span class="factor-number">FACTOR 01</span>
-          <h3 id="factor-name-0">National Economic Impact &amp; Growth Potential</h3>
+          <h3 id="factor-name-0">Economic Development Potential</h3>
           <div class="rating-field">
             <label id="weight-label-0" for="weight-0">Importance weight</label>
             <select id="weight-0" aria-labelledby="factor-name-0 weight-label-0"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -125,7 +125,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 02</span>
-          <h3 id="factor-name-1">Global Competitiveness &amp; Market Demand</h3>
+          <h3 id="factor-name-1">State Policy &amp; Education System</h3>
           <div class="rating-field">
             <label id="weight-label-1" for="weight-1">Importance weight</label>
             <select id="weight-1" aria-labelledby="factor-name-1 weight-label-1"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -133,7 +133,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 03</span>
-          <h3 id="factor-name-2">Talent &amp; Workforce Availability</h3>
+          <h3 id="factor-name-2">Existing Industry Strength &amp; Synergies</h3>
           <div class="rating-field">
             <label id="weight-label-2" for="weight-2">Importance weight</label>
             <select id="weight-2" aria-labelledby="factor-name-2 weight-label-2"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -141,7 +141,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 04</span>
-          <h3 id="factor-name-3">Policy &amp; Regulatory Support</h3>
+          <h3 id="factor-name-3">Infrastructure &amp; Digital Readiness</h3>
           <div class="rating-field">
             <label id="weight-label-3" for="weight-3">Importance weight</label>
             <select id="weight-3" aria-labelledby="factor-name-3 weight-label-3"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -149,7 +149,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 05</span>
-          <h3 id="factor-name-4">Infrastructure &amp; Technology Readiness</h3>
+          <h3 id="factor-name-4">Cost of Doing Business &amp; Incentives</h3>
           <div class="rating-field">
             <label id="weight-label-4" for="weight-4">Importance weight</label>
             <select id="weight-4" aria-labelledby="factor-name-4 weight-label-4"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -157,7 +157,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 06</span>
-          <h3 id="factor-name-5">Investment &amp; Capital Availability</h3>
+          <h3 id="factor-name-5">Innovation Ecosystem &amp; Research Assets</h3>
           <div class="rating-field">
             <label id="weight-label-5" for="weight-5">Importance weight</label>
             <select id="weight-5" aria-labelledby="factor-name-5 weight-label-5"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -165,7 +165,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 07</span>
-          <h3 id="factor-name-6">Industry Ecosystem &amp; Partnerships</h3>
+          <h3 id="factor-name-6">Access to Capital &amp; Funding</h3>
           <div class="rating-field">
             <label id="weight-label-6" for="weight-6">Importance weight</label>
             <select id="weight-6" aria-labelledby="factor-name-6 weight-label-6"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -173,7 +173,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 08</span>
-          <h3 id="factor-name-7">Social Impact &amp; Ethical Considerations</h3>
+          <h3 id="factor-name-7">Workforce Diversity &amp; Skills</h3>
           <div class="rating-field">
             <label id="weight-label-7" for="weight-7">Importance weight</label>
             <select id="weight-7" aria-labelledby="factor-name-7 weight-label-7"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -181,7 +181,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 09</span>
-          <h3 id="factor-name-8">Sustainability &amp; Environmental Impact</h3>
+          <h3 id="factor-name-8">Sustainability &amp; Community Impact</h3>
           <div class="rating-field">
             <label id="weight-label-8" for="weight-8">Importance weight</label>
             <select id="weight-8" aria-labelledby="factor-name-8 weight-label-8"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -189,7 +189,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
         </div>
 <div class="factor">
           <span class="factor-number">FACTOR 10</span>
-          <h3 id="factor-name-9">National Security &amp; Strategic Priority</h3>
+          <h3 id="factor-name-9">Risk &amp; Resilience Factors</h3>
           <div class="rating-field">
             <label id="weight-label-9" for="weight-9">Importance weight</label>
             <select id="weight-9" aria-labelledby="factor-name-9 weight-label-9"><option value="">Select a weight</option><option value="0">0 — Not applicable</option><option value="1">1 — Lowest</option><option value="2">2 — Low</option><option value="3">3 — Moderate</option><option value="4">4 — High</option><option value="5">5 — Highest</option></select>
@@ -211,7 +211,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
   </div>
   <section id="print-report" class="print-report" aria-label="Printable roadmap response"></section>
 </div>
-<script type="application/json" id="roadmap-config">{"title": "Country Decision Factors Roadmap", "scope": "country", "locationLabel": "Assigned country", "locationPlaceholder": "Enter your assigned country", "factors": ["National Economic Impact & Growth Potential", "Global Competitiveness & Market Demand", "Talent & Workforce Availability", "Policy & Regulatory Support", "Infrastructure & Technology Readiness", "Investment & Capital Availability", "Industry Ecosystem & Partnerships", "Social Impact & Ethical Considerations", "Sustainability & Environmental Impact", "National Security & Strategic Priority"]}</script>
+<script type="application/json" id="roadmap-config">{"title": "State AI Development Decision Roadmap", "scope": "U.S. state", "locationLabel": "Assigned U.S. state", "locationPlaceholder": "Enter your assigned state", "prompt": "Explain how your assigned state or nation can prepare for AI readiness by addressing energy, water, land, infrastructure, and workforce needs. Connect your priorities to local strengths, resilience, and economic, social, and environmental goals.", "factors": ["Economic Development Potential", "State Policy & Education System", "Existing Industry Strength & Synergies", "Infrastructure & Digital Readiness", "Cost of Doing Business & Incentives", "Innovation Ecosystem & Research Assets", "Access to Capital & Funding", "Workforce Diversity & Skills", "Sustainability & Community Impact", "Risk & Resilience Factors"]}</script>
 <script>
 (() => {
   'use strict';
@@ -292,7 +292,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
     });
     table.append(head, body);
     report.append(table);
-    report.append(makeElement('p', 'Importance weights express the student’s priorities for the selected AI industry.', 'report-note'));
+    report.append(makeElement('p', 'Importance weights express the student’s priorities for AI readiness.', 'report-note'));
   }
 
   ratings.forEach(select => select.addEventListener('change', updateSummary));
@@ -311,4 +311,3 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 12px 18px}
 </script>
 </body>
 </html>
-
